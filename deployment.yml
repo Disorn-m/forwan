@@ -1,0 +1,33 @@
+api-version: 2019-12-01
+location: southeastasia
+name: asatoolbox
+properties:
+  containers:
+  - name: streamlitapp
+    properties:
+      image: containertoolbox.azurecr.io/mm_asa_toolbox:v1
+      ports:
+      - port: 80
+        protocol: TCP
+      - port: 443
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 2.0
+          memoryInGB: 8.0
+  imageRegistryCredentials:
+  - server: containertoolbox.azurecr.io
+    username: containertoolbox
+    password: T7Df/cSXKdw9hiODf2aIjH6VjOPeIlagN0H64oRpqy+ACRCYLVE5
+  restartPolicy: Never
+  ipAddress:
+    ports:
+    - port: 443
+      protocol: TCP
+    - port: 80
+      protocol: TCP
+    type: Public
+    dnsNameLabel: asatoolbox
+  osType: Linux
+tags: null
+type: Microsoft.ContainerInstance/containerGroups

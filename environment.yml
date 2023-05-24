@@ -1,0 +1,32 @@
+name: mm_asa_toolbox
+channels:
+ - conda-forge
+ - defaults
+dependencies:
+ - python==3.9.1
+ - pip
+ - pip:
+   - streamlit
+   - pdf2image
+   - opencv-python
+   - scikit-image
+   - imutils
+   - matplotlib
+   - numpy
+   - poppler-utils
+   - plotly
+   - pandas==2.0.0
+   - openpyxl
+   - seaborn
+   - chart_studio
+   - geopandas
+   - ipython
+   - shapely
+   - scikit-learn
+   - flopy
+   - zipfile39
+   - xlwings
+   - pathlib
+   - re
+   - os
+   - functools
